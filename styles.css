@@ -1,0 +1,122 @@
+:root {
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --text: #111827;
+  --subtle: #6b7280;
+  --primary: #2563eb;
+  --danger: #dc2626;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 640px;
+  margin: 48px auto;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 1.6rem;
+}
+
+.memo-form {
+  display: flex;
+  gap: 8px;
+}
+
+.memo-form input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.memo-form button {
+  background: var(--primary);
+  color: #fff;
+}
+
+.memo-list {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.memo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.memo-text {
+  overflow-wrap: anywhere;
+}
+
+.memo-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.edit-btn {
+  background: #e5e7eb;
+}
+
+.delete-btn {
+  background: var(--danger);
+  color: #fff;
+}
+
+.empty {
+  margin-top: 12px;
+  color: var(--subtle);
+}
+
+@media (max-width: 520px) {
+  .app {
+    margin: 20px 12px;
+    padding: 16px;
+  }
+
+  .memo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .memo-actions {
+    width: 100%;
+  }
+
+  .memo-actions button {
+    flex: 1;
+  }
+}
